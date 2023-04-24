@@ -60,3 +60,4 @@ write(1, &buffer[0], *buff_ind);
 
 *buff_ind = 0;
 }
+
