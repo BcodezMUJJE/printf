@@ -1,5 +1,4 @@
 #include "main.h"
-
 /************************* PRINT UNSIGNED NUMBER *************************/
 /**
  * print_unsigned - Prints an unsigned number
@@ -21,12 +20,15 @@ num = convert_size_unsgnd(num, size);
 
 if (num == 0)
 buffer[i--] = '0';
+
 buffer[BUFF_SIZE - 1] = '\0';
+
 while (num > 0)
 {
 buffer[i--] = (num % 10) + '0';
 num /= 10;
 }
+
 i++;
 
 return (write_unsgnd(0, i, buffer, flags, width, precision, size));
@@ -55,6 +57,7 @@ num = convert_size_unsgnd(num, size);
 
 if (num == 0)
 buffer[i--] = '0';
+
 buffer[BUFF_SIZE - 1] = '\0';
 
 while (num > 0)
@@ -62,7 +65,6 @@ while (num > 0)
 buffer[i--] = (num % 8) + '0';
 num /= 8;
 }
-
 if (flags & F_HASH && init_num != 0)
 buffer[i--] = '0';
 
@@ -131,6 +133,7 @@ num = convert_size_unsgnd(num, size);
 
 if (num == 0)
 buffer[i--] = '0';
+
 buffer[BUFF_SIZE - 1] = '\0';
 
 while (num > 0)
@@ -143,6 +146,7 @@ if (flags & F_HASH && init_num != 0)
 buffer[i--] = flag_ch;
 buffer[i--] = '0';
 }
+
 i++;
 
 return (write_unsgnd(0, i, buffer, flags, width, precision, size));
